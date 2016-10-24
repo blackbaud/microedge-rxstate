@@ -1,0 +1,24 @@
+{
+  "name": "microedge-rxstate",
+  "version": "1.0.0",
+  "description": "Simple state management for TypeScript apps that use Reactive Extensions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackbaud/microedge-rxstate.git"
+  },
+  "keywords": [
+    "rx",
+    "rxstate",
+    "microedge",
+    "blackbaud"
+  ],
+  "author": "Brandon Stirnaman <brandon.stirnaman@blackbaud.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackbaud/microedge-rxstate/issues"
+  },
+  "homepage": "https://github.com/blackbaud/microedge-rxstate#readme",
+  "peerDependencies": {
+    "rxjs": "~5.0.0"
+  }
+}
