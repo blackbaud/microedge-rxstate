@@ -1,6 +1,6 @@
 {
   "name": "microedge-rxstate",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Simple state management for TypeScript apps that use Reactive Extensions",
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/blackbaud/microedge-rxstate#readme",
   "peerDependencies": {
-    "rxjs": "~5.0.0"
+    "rxjs": "^5.2.0"
   }
 }
