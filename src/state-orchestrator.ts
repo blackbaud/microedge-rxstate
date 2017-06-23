@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 export class StateOrchestrator<TStateNode, TAction> {
   private registeredActions: Array<any> = [];
