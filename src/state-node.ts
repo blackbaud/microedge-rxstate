@@ -1,4 +1,5 @@
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { StateDispatcher } from './state-dispatcher';
 
 export class StateNode<T> extends BehaviorSubject<T> {
@@ -23,7 +24,7 @@ export class StateNode<T> extends BehaviorSubject<T> {
 
     Observable.zip
       .apply(this, orchestrators)
-      .map(s => {
+      .map((s: any) => {
         let result = <T>{};
         for (var i = 0; i < stateKeys.length; i++) {
           var key = stateKeys[i];
@@ -32,6 +33,6 @@ export class StateNode<T> extends BehaviorSubject<T> {
 
         return result;
       })
-      .subscribe(s => this.next(s));
+      .subscribe((s: any) => this.next(s));
   }
 }
