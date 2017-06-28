@@ -1,2 +1,6 @@
+*.metadata.json
+*.ngsummary.json
+*.js
+*.d.ts
 /dist
 /node_modules

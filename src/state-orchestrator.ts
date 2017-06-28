@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/scan';
 
 export class StateOrchestrator<TStateNode, TAction> {
   private registeredActions: Array<any> = [];
@@ -18,7 +19,7 @@ export class StateOrchestrator<TStateNode, TAction> {
       throw new Error("Initial state for an orchestrator should never be null. Check your StateNode definition and registrations.");
     }
 
-    return actions.scan((state, action) => {
+    return actions.scan((state: any, action: any) => {
       for (var i = 0; i < this.registeredActions.length; i++) {
         var a = this.registeredActions[i] as any;
 

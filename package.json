@@ -1,6 +1,6 @@
 {
   "name": "microedge-rxstate",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Simple state management for TypeScript apps that use Reactive Extensions",
   "repository": {
     "type": "git",
@@ -19,12 +19,19 @@
   },
   "homepage": "https://github.com/blackbaud/microedge-rxstate#readme",
   "scripts": {
-    "clean": "rimraf -- dist",
+    "build": "npm run clean && cp -r ./src ./dist && ./node_modules/.bin/ngc",
+    "clean": "rimraf -- dist *.js *.d.ts *.ngsummary.json *.metadata.json",
     "prepublish": "npm run release",
-    "release": "npm run clean && cp -r ./src ./dist"
+    "release": "npm run build"
   },
   "devDependencies": {
-    "rimraf": "2.6.1"
+    "@angular/compiler": "4.2.5",
+    "@angular/compiler-cli": "4.2.5",
+    "zone.js": "~0.8.10",
+    "@angular/core": "4.2.5",
+    "rimraf": "2.6.1",
+    "rxjs": "5.4.0",
+    "typescript": "2.3.2"
   },
   "peerDependencies": {
     "rxjs": "5.4.0"

@@ -1,1 +1,1 @@
-export * from './src/helpers'
+export * from './dist/helpers'
