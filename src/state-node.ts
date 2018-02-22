@@ -2,6 +2,7 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { StateDispatcher } from './state-dispatcher';
 import 'rxjs/add/observable/zip';
+import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/scan';
 
 export class StateNode<T> extends BehaviorSubject<T> {
