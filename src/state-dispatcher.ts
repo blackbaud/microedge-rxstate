@@ -1,4 +1,4 @@
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 export class StateDispatcher<TAction> extends Subject<TAction> {
 }

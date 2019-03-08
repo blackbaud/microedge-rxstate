@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 export function getValue(property: any, callback: any) {
   if (property instanceof Observable) {

@@ -1,9 +1,5 @@
-import { Observable } from 'rxjs/Observable';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject, zip } from 'rxjs';
 import { StateDispatcher } from './state-dispatcher';
-import 'rxjs/add/observable/zip';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/scan';
 
 export class StateNode<T> extends BehaviorSubject<T> {
   private stateMap: { [stateKey: string]: any } = {};
@@ -26,7 +22,7 @@ export class StateNode<T> extends BehaviorSubject<T> {
     let init: { [stateKey: string]: any } = this.initialState;
     let orchestrators = stateKeys.map(key => new (this.stateMap[key])().scan(init[key], this.dispatcher));
 
-    Observable.zip
+    zip
       .apply(this, orchestrators)
       .map((s: any) => {
         let result: any = <T>{};
